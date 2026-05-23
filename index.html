@@ -464,9 +464,13 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     // ==========================================
     // SHOW/HIDE SCREENS
     // ==========================================
+    const countedScreens = new Set();
     function showScreen(screen) {
-        if (typeof fbq === 'function') fbq('trackCustom', 'ViewScreen_' + screen);
         currentScreen = screen;
+        if (!countedScreens.has('screen_' + screen)) {
+            countedScreens.add('screen_' + screen);
+            fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/screen_' + screen + '/up').catch(e=>e);
+        }
         // Hide everything
         document.getElementById('quiz-container').style.display = 'none';
         document.getElementById('screen-preocupante').style.display = 'none';
@@ -651,8 +655,12 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     // ==========================================
     // QUIZ UI
     // ==========================================
+    const countedSteps = new Set();
     function updateUI() {
-        if (typeof fbq === 'function' && currentScreen === 'quiz') fbq('trackCustom', 'Quiz_Etapa_' + currentStep);
+        if (currentScreen === 'quiz' && !countedSteps.has(currentStep)) {
+            countedSteps.add(currentStep);
+            fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/etapa_' + currentStep + '/up').catch(e=>e);
+        }
         document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
         document.getElementById('step-' + currentStep).classList.add('active');
 

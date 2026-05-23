@@ -500,5 +500,11 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 
+<script>
+    if (!sessionStorage.getItem('tracked_resultado')) {
+        sessionStorage.setItem('tracked_resultado', 'true');
+        fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/pagina_resultado/up').catch(e=>e);
+    }
+</script>
 </body>
 </html>

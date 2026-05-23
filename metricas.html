@@ -87,7 +87,7 @@
 
     async function fetchMetric(name) {
         try {
-            const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${name}`);
+            const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${name}/`);
             if (!res.ok) return 0;
             const data = await res.json();
             return data.count || 0;

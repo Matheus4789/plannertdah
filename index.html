@@ -465,6 +465,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     // SHOW/HIDE SCREENS
     // ==========================================
     function showScreen(screen) {
+        if (typeof fbq === 'function') fbq('trackCustom', 'ViewScreen_' + screen);
         currentScreen = screen;
         // Hide everything
         document.getElementById('quiz-container').style.display = 'none';
@@ -651,6 +652,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     // QUIZ UI
     // ==========================================
     function updateUI() {
+        if (typeof fbq === 'function' && currentScreen === 'quiz') fbq('trackCustom', 'Quiz_Etapa_' + currentStep);
         document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
         document.getElementById('step-' + currentStep).classList.add('active');
 

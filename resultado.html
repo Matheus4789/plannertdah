@@ -51,7 +51,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
                 <p class="text-amber-800 text-base mb-6 max-w-lg mx-auto dyn-subtitle">Baseado nas suas respostas, criamos o planner perfeito para transformar os desafios do seu filho em conquistas que vocês celebram juntos.</p>
             </div>
             <div class="fade-up" style="transition-delay: 450ms;">
-                <button onclick="scrollToPrice()" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-2xl text-base transition-all duration-200 shadow-md dyn-btn-1">Quero o Planner do seu filho agora!</button>
+                <button onclick="scrollToPrice()" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 w-full sm:w-auto sm:px-10 rounded-2xl text-base transition-all duration-200 shadow-md dyn-btn-1">Quero o Planner do seu filho agora!</button>
                 <div class="flex items-center justify-center gap-2 mt-3">
                     <div class="flex text-orange-400 text-sm">★★★★★</div>
                     <span class="text-xs text-amber-700">4,9 de 5 (4.231+ famílias)</span>
@@ -310,24 +310,24 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 
     // Floating Cards Animation
     const cardsData = [
-        {icon:"🌅",label:"Rotina Matinal", initTransform:"translate(-80px,-30px) rotate(-20deg) scale(0.3)", finalTransform:"rotate(-5deg) scale(1)", left:10, top:20},
-        {icon:"📋",label:"Planner Semanal", initTransform:"translate(-80px,0px) rotate(-15deg) scale(0.3)", finalTransform:"rotate(-4deg) scale(1)", left:5, top:150},
-        {icon:"✏️",label:"Dever de Casa", initTransform:"translate(-80px,30px) rotate(-18deg) scale(0.3)", finalTransform:"rotate(-6deg) scale(1)", left:10, top:275},
-        {icon:"🎯",label:"Metas da Semana", initTransform:"translate(80px,-30px) rotate(20deg) scale(0.3)", finalTransform:"rotate(5deg) scale(1)", left:380, top:10},
-        {icon:"🏆",label:"Missões", initTransform:"translate(80px,0px) rotate(15deg) scale(0.3)", finalTransform:"rotate(4deg) scale(1)", left:385, top:145},
-        {icon:"⭐",label:"Conquistas", initTransform:"translate(80px,30px) rotate(18deg) scale(0.3)", finalTransform:"rotate(6deg) scale(1)", left:380, top:270},
-        {icon:"💪",label:"Emoções", initTransform:"translate(0px,70px) rotate(8deg) scale(0.3)", finalTransform:"rotate(2deg) scale(1)", left:195, top:310}
+        {icon:"🌅",label:"Rotina Matinal", initTransform:"translate(-80px,-30px) rotate(-20deg) scale(0.3)", finalTransform:"rotate(-5deg) scale(1)", pos:"left:10px; top:20px;"},
+        {icon:"📋",label:"Planner Semanal", initTransform:"translate(-80px,0px) rotate(-15deg) scale(0.3)", finalTransform:"rotate(-4deg) scale(1)", pos:"left:5px; top:150px;"},
+        {icon:"✏️",label:"Dever de Casa", initTransform:"translate(-80px,30px) rotate(-18deg) scale(0.3)", finalTransform:"rotate(-6deg) scale(1)", pos:"left:10px; top:275px;"},
+        {icon:"🎯",label:"Metas da Semana", initTransform:"translate(80px,-30px) rotate(20deg) scale(0.3)", finalTransform:"rotate(5deg) scale(1)", pos:"right:10px; top:10px;"},
+        {icon:"🏆",label:"Missões", initTransform:"translate(80px,0px) rotate(15deg) scale(0.3)", finalTransform:"rotate(4deg) scale(1)", pos:"right:5px; top:145px;"},
+        {icon:"⭐",label:"Conquistas", initTransform:"translate(80px,30px) rotate(18deg) scale(0.3)", finalTransform:"rotate(6deg) scale(1)", pos:"right:10px; top:270px;"},
+        {icon:"💪",label:"Emoções", initTransform:"translate(0px,70px) rotate(8deg) scale(0.3)", finalTransform:"rotate(2deg) scale(1)", pos:"left:50%; margin-left:-45px; top:310px;"}
     ];
 
     let cardsHtml = cardsData.map((c, idx) => `
-        <div class="absolute" style="left:${c.left}px; top:${c.top}px; width:90px; z-index:5; transition:all 0.65s cubic-bezier(0.34, 1.56, 0.64, 1); transform:${c.initTransform}; opacity:0;" id="fcard-${idx}">
+        <div class="absolute" style="${c.pos} width:90px; z-index:5; transition:all 0.65s cubic-bezier(0.34, 1.56, 0.64, 1); transform:${c.initTransform}; opacity:0;" id="fcard-${idx}">
             <div class="rounded-xl shadow-lg border border-orange-100 overflow-hidden">
                 <img src="images/pagina-${idx+1}.jpg" alt="" class="w-full object-cover" style="height:110px">
             </div>
         </div>
     `).join('');
     cardsHtml += `
-        <div class="absolute" style="left:175px; top:60px; z-index:10;">
+        <div class="absolute" style="left:50%; margin-left:-64px; top:60px; z-index:10;">
             <div class="w-32 h-44 rounded-2xl shadow-2xl border-2 border-orange-200 overflow-hidden relative">
                 <img src="images/pagina-missoes.jpg" alt="Planner" class="w-full h-full object-cover">
                 <div class="absolute -top-2 -right-2 bg-orange-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full shadow-md">PDF A4</div>

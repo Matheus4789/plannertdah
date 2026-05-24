@@ -96,8 +96,8 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 </div>
 
 <!-- STICKY BUTTON (LANDING PAGE ONLY) -->
-<div id="sticky-btn-container" class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#fffbf5] via-[#fffbf5] to-transparent z-40 pb-6 flex justify-center pointer-events-none">
-    <div class="w-full max-w-lg pointer-events-auto">
+<div id="sticky-btn-container" class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#fffbf5] via-[#fffbf5] to-transparent z-40 pb-6 flex justify-center">
+    <div class="w-full max-w-lg">
         <button onclick="startQuiz()" class="block w-full bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-600 tracking-wide animate-bounce">Criar o Planner Agora →</button>
     </div>
 </div>
@@ -454,10 +454,26 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     let currentScreen = 'quiz';
 
     // ==========================================
+    // TRACKING (Daily and All-time)
+    // ==========================================
+    const d = new Date();
+    const todayStr = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const baseNamespace = 'plannertdah_metrics_v2';
+    
+    function trackMetric(metric) {
+        try {
+            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_${todayStr}/${metric}/up`).catch(e=>e);
+            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_all/${metric}/up`).catch(e=>e);
+        } catch(e) {
+            console.error('Metrics error:', e);
+        }
+    }
+
+    // ==========================================
     // START QUIZ
     // ==========================================
     function startQuiz() {
-        fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/click_start/up').catch(e=>e);
+        trackMetric('click_start');
         document.getElementById('landing-container').style.display = 'none';
         const stickyBtn = document.getElementById('sticky-btn-container');
         if(stickyBtn) stickyBtn.style.display = 'none';
@@ -475,7 +491,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         currentScreen = screen;
         if (!countedScreens.has('screen_' + screen)) {
             countedScreens.add('screen_' + screen);
-            fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/screen_' + screen + '/up').catch(e=>e);
+            trackMetric('screen_' + screen);
         }
         // Hide everything
         document.getElementById('quiz-container').style.display = 'none';
@@ -665,7 +681,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     function updateUI() {
         if (currentScreen === 'quiz' && !countedSteps.has(currentStep)) {
             countedSteps.add(currentStep);
-            fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/etapa_' + currentStep + '/up').catch(e=>e);
+            trackMetric('etapa_' + currentStep);
         }
         document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
         document.getElementById('step-' + currentStep).classList.add('active');

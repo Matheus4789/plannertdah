@@ -43,7 +43,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 <main class="min-h-screen bg-gradient-to-b from-[#fffbf5] via-[#fff8ee] to-[#fff4e3] flex items-center justify-center px-5 py-14">
 
 <!-- LANDING PAGE -->
-<div class="w-full max-w-lg animate-fade-in" id="landing-container">
+<div class="w-full max-w-lg animate-fade-in pb-24" id="landing-container">
 <div class="flex justify-center mb-8">
 <div class="flex items-center gap-2.5 bg-white border border-orange-200 rounded-full px-5 py-2 shadow-sm">
 <div class="w-7 h-7 bg-orange-400 rounded-full flex items-center justify-center text-sm">💡</div>
@@ -97,6 +97,11 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 </div>
 <p class="text-xs text-amber-700 font-semibold ml-1">+2.400 famílias já transformaram a rotina</p>
 </div>
+</div>
+
+<!-- STICKY BUTTON (LANDING PAGE ONLY) -->
+<div id="sticky-btn-container" class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#fffbf5] via-[#fffbf5] to-transparent z-40 sm:hidden pb-6">
+    <button onclick="startQuiz()" class="block w-full bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-600 tracking-wide animate-bounce">Criar o Planner Agora →</button>
 </div>
 
 <!-- PROGRESS BAR -->
@@ -456,6 +461,8 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
     function startQuiz() {
         fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/click_start/up').catch(e=>e);
         document.getElementById('landing-container').style.display = 'none';
+        const stickyBtn = document.getElementById('sticky-btn-container');
+        if(stickyBtn) stickyBtn.style.display = 'none';
         document.getElementById('quiz-progress-bar').style.display = 'block';
         document.getElementById('quiz-container').style.display = 'block';
         document.querySelector('main').classList.remove('bg-gradient-to-b', 'from-[#fffbf5]', 'via-[#fff8ee]', 'to-[#fff4e3]', 'flex', 'items-center', 'justify-center', 'px-5', 'py-14');

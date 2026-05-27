@@ -512,7 +512,15 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 <script>
     if (!sessionStorage.getItem('tracked_resultado')) {
         sessionStorage.setItem('tracked_resultado', 'true');
-        fetch('https://api.counterapi.dev/v1/plannertdah_metrics_v1/pagina_resultado/up').catch(e=>e);
+        try {
+            const dateObj = new Date();
+            const todayStr = dateObj.getFullYear() + '-' + String(dateObj.getMonth() + 1).padStart(2, '0') + '-' + String(dateObj.getDate()).padStart(2, '0');
+            const baseNamespace = 'plannertdah_metrics_v3';
+            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_${todayStr}/pagina_resultado/up`).catch(e=>e);
+            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_all/pagina_resultado/up`).catch(e=>e);
+        } catch(e) {
+            console.error('Metrics error:', e);
+        }
     }
 </script>
 </body>

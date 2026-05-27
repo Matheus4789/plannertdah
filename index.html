@@ -10,14 +10,7 @@
   async
   defer
 ></script>
-<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/463e3284-d799-4d1d-acd8-1e72aee88512/players/6a14f4f4fb55d64167af66b4/v4/player.js" as="script">
-<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/463e3284-d799-4d1d-acd8-1e72aee88512/6a14f4eb6271da858ff3458b/main.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://license.vturb.com">
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="fonts/47fe1b7cd6e6ed85-s.p.0~mcdl10zdfb3.woff2" as="font" crossorigin="" type="font/woff2">
@@ -65,8 +58,9 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-[#7c2d12] leading-[1.15] tracking-tight">O planner que ajuda seu filho a criar <span class="text-orange-500">foco e responsabilidade</span> brincando</h2>
 </div>
 <div class="flex justify-center mb-8">
-<div class="w-full">
-<vturb-smartplayer id="vid-6a14f4f4fb55d64167af66b4" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/463e3284-d799-4d1d-acd8-1e72aee88512/players/6a14f4f4fb55d64167af66b4/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+<div class="relative">
+<img src="images/capa-planner.png" alt="Planner TDAH Produtivo Kids" width="208" height="208" class="rounded-3xl shadow-lg object-contain">
+<div class="absolute -top-3 -right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md rotate-3">✨ Novo!</div>
 </div>
 </div>
 <div class="flex justify-center mb-5">
@@ -678,7 +672,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
                 document.getElementById('planner-cover').classList.add('border-green-400', 'scale-105');
                 clearInterval(pctInterval);
                 setTimeout(() => {
-                    window.location.href = "resultado.html"; // <-- COLOQUE SEU LINK AQUI
+                    window.location.href = `resultado.html?genero=${encodeURIComponent(answers.gender)}&nome=${encodeURIComponent(answers.name)}`;
                 }, 2800);
             } else if (pct > 60) {
                 document.getElementById('loading-status-text').textContent = `Finalizando o planner ${pronoun} ${childName}...`;

@@ -30,6 +30,103 @@
     .option-selected { border-color: #fb923c !important; background-color: #fff7ed !important; transform: scale(1.02); }
     .interstitial-screen { display: none; }
     .interstitial-screen.active { display: flex; }
+
+    /* Shimmer animation for CTA button */
+    @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+    .btn-shimmer {
+        background: linear-gradient(110deg, #f97316 0%, #f97316 40%, #fbbf24 50%, #f97316 60%, #f97316 100%);
+        background-size: 200% 100%;
+        animation: shimmer 2.5s ease-in-out infinite;
+    }
+    .btn-shimmer:hover {
+        background: #ea580c;
+        animation: none;
+    }
+
+    /* Subtle pulse for CTA (runs 3 times then stops) */
+    @keyframes gentlePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+    }
+    .btn-pulse {
+        animation: gentlePulse 1.5s ease-in-out 3;
+    }
+
+    /* Testimonial carousel */
+    .testimonial-track {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 8px;
+    }
+    .testimonial-track::-webkit-scrollbar { display: none; }
+    .testimonial-track > div {
+        scroll-snap-align: center;
+        flex: 0 0 85%;
+        max-width: 320px;
+    }
+
+    /* Roulette Styles */
+    .roulette-container {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 4px solid #f97316;
+        overflow: hidden;
+        box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.4);
+    }
+    .roulette-wheel {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(
+            #fb923c 0deg 90deg, 
+            #f59e0b 90deg 180deg, 
+            #f97316 180deg 270deg, 
+            #fbbf24 270deg 360deg
+        );
+        transition: transform 3.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+        position: relative;
+    }
+    .roulette-text {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+    .roulette-text div {
+        position: absolute;
+        width: 100%; height: 100%;
+        text-align: center;
+        padding-top: 15px;
+        font-weight: 900;
+        font-size: 26px;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .rt-1 { transform: rotate(45deg); }   /* 20% OFF */
+    .rt-2 { transform: rotate(135deg); }  /* 80% OFF */
+    .rt-3 { transform: rotate(225deg); }  /* 40% OFF */
+    .rt-4 { transform: rotate(315deg); }  /* 50% OFF */
+    .roulette-pointer {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 25px solid #b45309;
+        z-index: 10;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+    }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -55,23 +152,44 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 <!-- LANDING PAGE -->
 <div class="w-full max-w-lg animate-fade-in pb-24" id="landing-container">
 
-<div class="flex justify-center mb-8">
+<!-- COMPACT HERO: Headline + CTA visible without scroll -->
+<div class="flex justify-center mb-4">
 <div class="relative">
-<img src="images/capa-planner.png" alt="Planner TDAH Produtivo Kids" width="208" height="208" class="rounded-3xl shadow-lg object-contain">
-<div class="absolute -top-3 -right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md rotate-3">✨ Novo!</div>
+<img src="images/capa-planner.png" alt="Planner TDAH Produtivo Kids" width="160" height="160" class="rounded-2xl shadow-lg object-contain">
+<div class="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-md">⭐ 4.9/5</div>
 </div>
 </div>
-<div class="flex justify-center mb-5">
-<span class="bg-amber-100 text-amber-700 text-xs font-semibold px-5 py-2 rounded-full border border-amber-200 shadow-sm">100% personalizado para o cérebro do seu filho</span>
-</div>
-<h1 class="text-5xl sm:text-6xl font-extrabold text-center text-[#7c2d12] leading-[1.15] mb-4 tracking-tight">Seu filho não é<br>
-<span class="text-orange-500">preguiçoso.</span>
+<h1 class="text-3xl sm:text-4xl font-extrabold text-center text-[#7c2d12] leading-[1.15] mb-2 tracking-tight">Descubra o sistema que <span class="text-orange-500">transforma</span> a rotina de crianças com TDAH
 </h1>
-<p class="text-lg sm:text-xl text-center font-semibold text-amber-800 mb-3 leading-snug">O cérebro dele só precisa de<br class="hidden sm:block"> um sistema diferente.</p>
-<p class="text-center text-sm text-amber-700 mb-8 leading-relaxed max-w-sm mx-auto">Responda <strong>6 perguntas rápidas</strong> e receba um planner criado especialmente para a rotina do seu filho com TDAH — para vocês usarem juntos.</p>
-<div class="bg-white rounded-2xl px-5 py-5 mb-8 border border-orange-100 shadow-sm">
-<p class="text-xs font-bold text-amber-700 mb-4 uppercase tracking-wider text-center">💡 Criado para o cérebro do seu filho</p>
-<div class="grid grid-cols-2 gap-3">
+<p class="text-center text-sm text-amber-700 mb-4 leading-relaxed max-w-sm mx-auto">Responda a um <strong>quiz rápido de 2 minutos</strong> e receba um planner <strong>100% personalizado</strong> para o seu filho — para vocês usarem juntos.</p>
+
+<!-- INLINE CTA (visible without scroll) -->
+<button onclick="startQuiz()" class="btn-shimmer btn-pulse block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide mb-4">Começar o Quiz Grátis →</button>
+<p class="text-center text-xs text-amber-600 mb-6 font-medium">Leva menos de 2 minutos · 100% gratuito · Para crianças de 4 a 14 anos</p>
+
+<!-- SOCIAL PROOF: Real testimonials carousel -->
+<div class="mb-5">
+<p class="text-xs font-bold text-amber-700 mb-3 uppercase tracking-wider text-center">💬 O que dizem mães reais</p>
+<div class="testimonial-track">
+    <div>
+        <img src="images/2.webp" alt="Depoimento de mãe real" class="rounded-xl shadow-md border border-orange-100 w-full">
+    </div>
+    <div>
+        <img src="images/Frase-Motivacional-Instagram-Feed-Twitter-2023-09-09T211816.824.webp" alt="Depoimento de mãe real" class="rounded-xl shadow-md border border-orange-100 w-full">
+    </div>
+    <div>
+        <img src="images/WhatsApp-Image-2024-08-19-at-22.20.21-1.jpeg" alt="Depoimento de mãe real" class="rounded-xl shadow-md border border-orange-100 w-full">
+    </div>
+    <div>
+        <img src="images/WhatsApp-Image-2024-08-19-at-22.20.35.jpeg" alt="Depoimento de mãe real" class="rounded-xl shadow-md border border-orange-100 w-full">
+    </div>
+</div>
+<p class="text-center text-[10px] text-amber-500 mt-2">← Arraste para ver mais depoimentos</p>
+</div>
+
+<!-- BENEFITS (compact) -->
+<div class="bg-white rounded-2xl px-4 py-4 mb-4 border border-orange-100 shadow-sm">
+<div class="grid grid-cols-2 gap-2">
 <div class="flex items-start gap-2 text-sm text-amber-900">
 <span class="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
 <span class="font-medium">Combate a procrastinação</span>
@@ -90,15 +208,8 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 </div>
 </div>
 </div>
-<p class="text-center text-xs text-amber-600 mt-3 font-medium">Leva menos de 2 minutos · Para crianças de 4 a 14 anos</p>
-<div class="flex items-center justify-center gap-1.5 mt-5">
-<div class="flex -space-x-1.5">
-<div class="w-7 h-7 bg-amber-100 border-2 border-white rounded-full flex items-center justify-center text-sm shadow-sm">🧑</div>
-<div class="w-7 h-7 bg-amber-100 border-2 border-white rounded-full flex items-center justify-center text-sm shadow-sm">👩</div>
-<div class="w-7 h-7 bg-amber-100 border-2 border-white rounded-full flex items-center justify-center text-sm shadow-sm">👨</div>
-<div class="w-7 h-7 bg-amber-100 border-2 border-white rounded-full flex items-center justify-center text-sm shadow-sm">👩‍🦱</div>
-<div class="w-7 h-7 bg-amber-100 border-2 border-white rounded-full flex items-center justify-center text-sm shadow-sm">👩‍🦰</div>
-</div>
+<div class="flex items-center justify-center gap-1.5">
+<div class="flex text-orange-400 text-sm">★★★★★</div>
 <p class="text-xs text-amber-700 font-semibold ml-1">+2.400 famílias já transformaram a rotina</p>
 </div>
 </div>
@@ -106,7 +217,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 <!-- STICKY BUTTON (LANDING PAGE ONLY) -->
 <div id="sticky-btn-container" class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#fffbf5] via-[#fffbf5] to-transparent z-40 pb-6 flex justify-center">
     <div class="w-full max-w-lg">
-        <button onclick="startQuiz()" class="block w-full bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-600 tracking-wide animate-bounce">Criar o Planner Agora →</button>
+        <button onclick="startQuiz()" class="btn-shimmer block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide active:scale-95">Responder 6 Perguntas →</button>
     </div>
 </div>
 
@@ -145,21 +256,25 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug" id="title-step-2">Quantos anos ele tem?</h2>
         <p class="text-center text-amber-600 text-sm mb-6">Selecione uma opção</p>
         <div class="grid grid-cols-2 gap-4">
-            <button class="option-btn rounded-2xl border-2 p-5 flex flex-col items-center gap-2 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '4-6', this)">
-                <span class="text-4xl">🧒</span>
+            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '4-6', this)">
+                <span class="text-4xl mb-1">🧒</span>
                 <span class="font-bold text-amber-800 text-lg">4-6 anos</span>
+                <span class="text-xs text-amber-600 text-center leading-tight">Fase de descobrir o mundo</span>
             </button>
-            <button class="option-btn rounded-2xl border-2 p-5 flex flex-col items-center gap-2 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '7-9', this)">
-                <span class="text-4xl">👦</span>
+            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '7-9', this)">
+                <span class="text-4xl mb-1">👦</span>
                 <span class="font-bold text-amber-800 text-lg">7-9 anos</span>
+                <span class="text-xs text-amber-600 text-center leading-tight">Quando a escola começa a cobrar</span>
             </button>
-            <button class="option-btn rounded-2xl border-2 p-5 flex flex-col items-center gap-2 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '10-12', this)">
-                <span class="text-4xl">🧑</span>
+            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '10-12', this)">
+                <span class="text-4xl mb-1">🧑</span>
                 <span class="font-bold text-amber-800 text-lg">10-12 anos</span>
+                <span class="text-xs text-amber-600 text-center leading-tight">Pré-adolescência + TDAH</span>
             </button>
-            <button class="option-btn rounded-2xl border-2 p-5 flex flex-col items-center gap-2 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '13-14', this)">
-                <span class="text-4xl">🧑‍🎓</span>
+            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '13-14', this)">
+                <span class="text-4xl mb-1">🧑‍🎓</span>
                 <span class="font-bold text-amber-800 text-lg">13-14 anos</span>
+                <span class="text-xs text-amber-600 text-center leading-tight">Em busca de autonomia</span>
             </button>
         </div>
     </div>
@@ -248,38 +363,38 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         <div class="flex flex-col gap-4 mb-6" id="preo-bars">
             <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
                 <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700">⏰ Dificuldade em seguir rotinas</span>
-                    <span class="text-sm font-bold text-red-500">82%</span>
+                    <span class="text-sm font-medium text-gray-700" id="preo-label-0">⏰ Dificuldade em seguir rotinas</span>
+                    <span class="text-sm font-bold text-red-500" id="preo-pct-0">82%</span>
                 </div>
                 <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
+                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-0" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
                 </div>
             </div>
             <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
                 <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700">📚 Conflitos no dever de casa</span>
-                    <span class="text-sm font-bold text-red-500">78%</span>
+                    <span class="text-sm font-medium text-gray-700" id="preo-label-1">📚 Conflitos no dever de casa</span>
+                    <span class="text-sm font-bold text-red-500" id="preo-pct-1">78%</span>
                 </div>
                 <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
+                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-1" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
                 </div>
             </div>
             <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
                 <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700">🎒 Desorganização escolar</span>
-                    <span class="text-sm font-bold text-red-500">74%</span>
+                    <span class="text-sm font-medium text-gray-700" id="preo-label-2">🎒 Desorganização escolar</span>
+                    <span class="text-sm font-bold text-red-500" id="preo-pct-2">74%</span>
                 </div>
                 <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
+                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-2" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
                 </div>
             </div>
             <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
                 <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700">😔 Baixa autoconfiança</span>
-                    <span class="text-sm font-bold text-red-500">71%</span>
+                    <span class="text-sm font-medium text-gray-700" id="preo-label-3">😔 Baixa autoconfiança</span>
+                    <span class="text-sm font-bold text-red-500" id="preo-pct-3">71%</span>
                 </div>
                 <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
+                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-3" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
                 </div>
             </div>
         </div>
@@ -361,6 +476,32 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         <div class="bg-amber-50 border border-amber-100 rounded-2xl p-4">
             <p class="text-xs font-bold text-amber-700 mb-3" id="checklist-title">Personalizando o planner:</p>
             <div class="flex flex-col gap-1.5" id="checklist-items"></div>
+        </div>
+    </div>
+</div>
+
+<!-- INTERSTITIAL: Roulette -->
+<div class="interstitial-screen items-center justify-center min-h-screen px-4 py-8" id="screen-roulette" style="display:none;">
+    <div class="bg-white rounded-3xl shadow-lg p-6 border border-orange-100 w-full max-w-lg text-center">
+        <h2 class="text-2xl font-extrabold text-[#92400e] mb-2 leading-snug">Parabéns! O planner está pronto!</h2>
+        <p class="text-amber-700 text-sm mb-6">Gire a roleta para ver qual <strong>desconto exclusivo</strong> você ganhou para acessar o planner agora:</p>
+        
+        <div class="roulette-container mb-6">
+            <div class="roulette-pointer"></div>
+            <div class="roulette-wheel" id="roulette-wheel">
+                <div class="roulette-text rt-1"><div>20% OFF</div></div>
+                <div class="roulette-text rt-2"><div>80% OFF</div></div>
+                <div class="roulette-text rt-3"><div>40% OFF</div></div>
+                <div class="roulette-text rt-4"><div>50% OFF</div></div>
+            </div>
+        </div>
+        
+        <button id="btn-spin" onclick="spinRoulette()" class="w-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] text-white font-extrabold py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide">Girar Roleta!</button>
+        
+        <div id="roulette-result" class="hidden mt-6 bg-green-50 border border-green-200 rounded-2xl p-4 animate-fade-in">
+            <p class="text-green-800 font-extrabold text-lg mb-1">🎉 VOCÊ GANHOU 80% OFF! 🎉</p>
+            <p class="text-green-700 text-sm mb-4">O desconto já foi aplicado e será válido por 27 minutos.</p>
+            <button onclick="goToResults()" class="btn-shimmer block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-lg border-b-4 border-green-700 bg-green-600 tracking-wide active:scale-95">Ver o Planner + Desconto →</button>
         </div>
     </div>
 </div>
@@ -506,6 +647,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         document.getElementById('screen-preocupante').style.display = 'none';
         document.getElementById('screen-entendemos').style.display = 'none';
         document.getElementById('screen-loading').style.display = 'none';
+        document.getElementById('screen-roulette').style.display = 'none';
 
         if (screen === 'quiz') {
             document.getElementById('quiz-container').style.display = 'block';
@@ -521,6 +663,8 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         } else if (screen === 'loading') {
             document.getElementById('screen-loading').style.display = 'flex';
             startLoadingAnimation();
+        } else if (screen === 'roulette') {
+            document.getElementById('screen-roulette').style.display = 'flex';
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -536,6 +680,36 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
         const bars = document.querySelectorAll('#preo-bars > div');
         const barFills = document.querySelectorAll('#preo-bars .h-full');
         const pcts = [82, 78, 74, 71];
+
+        // Set dynamic labels from user's answers if possible
+        let selectedOptions = [];
+        if(selections[4]) selectedOptions = selectedOptions.concat(selections[4]);
+        if(selections[5]) selectedOptions = selectedOptions.concat(selections[5]);
+        
+        const fallbackLabels = [
+            "⏰ Dificuldade em seguir rotinas",
+            "📚 Conflitos no dever de casa",
+            "🎒 Desorganização escolar",
+            "😔 Baixa autoconfiança"
+        ];
+        
+        for (let i = 0; i < 4; i++) {
+            let labelText = fallbackLabels[i];
+            if (selectedOptions[i]) {
+                const optText = selectedOptions[i];
+                // Find emoji for this option from multiOptions
+                let emoji = "⚠️";
+                let found = false;
+                for (let j = 4; j <= 6; j++) {
+                    if(!found && multiOptions[j]) {
+                        const match = multiOptions[j].find(o => o.l === optText);
+                        if(match) { emoji = match.e; found = true; }
+                    }
+                }
+                labelText = `${emoji} ${optText}`;
+            }
+            document.getElementById(`preo-label-${i}`).textContent = labelText;
+        }
 
         document.getElementById('preo-title').style.opacity = '0';
         document.getElementById('preo-title').style.transform = 'translateY(14px)';
@@ -670,7 +844,7 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
                 document.getElementById('planner-cover').classList.add('border-green-400', 'scale-105');
                 clearInterval(pctInterval);
                 setTimeout(() => {
-                    window.location.href = `resultado.html?genero=${encodeURIComponent(answers.gender)}&nome=${encodeURIComponent(answers.name)}`;
+                    showScreen('roulette');
                 }, 2800);
             } else if (pct > 60) {
                 document.getElementById('loading-status-text').textContent = `Finalizando o planner ${pronoun} ${childName}...`;
@@ -680,6 +854,30 @@ src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
                 document.getElementById('loading-status-text').textContent = `Preparando o planner ${pronoun} ${childName}...`;
             }
         }, 95);
+    }
+
+    // ==========================================
+    // ROULETTE ANIMATION
+    // ==========================================
+    function spinRoulette() {
+        const wheel = document.getElementById('roulette-wheel');
+        const btn = document.getElementById('btn-spin');
+        // Disable button
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        
+        // Spin logic: rt-2 (80% OFF) is at 135deg. We rotate wheel by 360*5 + 225 = 2025deg to land on it exactly at the top.
+        wheel.style.transform = 'rotate(2025deg)';
+        
+        // Wait for spin to finish (3.5s transition time)
+        setTimeout(() => {
+            btn.style.display = 'none';
+            document.getElementById('roulette-result').classList.remove('hidden');
+        }, 3600);
+    }
+
+    function goToResults() {
+        window.location.href = `resultado.html?genero=${encodeURIComponent(answers.gender)}&nome=${encodeURIComponent(answers.name)}`;
     }
 
     // ==========================================

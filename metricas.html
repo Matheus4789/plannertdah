@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Métricas do Funil - TDAH Produtivo</title>
+    <title>Métricas del Embudo - TDAH Productivo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; background-color: #f3f4f6; }
@@ -21,48 +21,48 @@
 <div class="max-w-3xl mx-auto">
     <div class="flex justify-between items-center mb-8">
         <div>
-            <h1 class="text-3xl font-extrabold text-gray-900">Dashboard de Métricas</h1>
-            <p class="text-gray-500 mt-1">Acompanhamento em tempo real do funil.</p>
+            <h1 class="text-3xl font-extrabold text-gray-900">Panel de Métricas</h1>
+            <p class="text-gray-500 mt-1">Seguimiento en tiempo real del embudo.</p>
         </div>
         <div class="flex items-center gap-3">
-            <input type="date" id="date-selector" class="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 bg-white" onchange="loadMetrics()" title="Deixe vazio para Todo o Período">
+            <input type="date" id="date-selector" class="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 bg-white" onchange="loadMetrics()" title="Dejar en blanco para Todo el Período">
             <button onclick="loadMetrics()" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                Atualizar
+                Actualizar
             </button>
         </div>
     </div>
 
-    <!-- Visão Geral -->
-    <h2 class="text-xl font-bold text-gray-800 mb-4">Visão Geral</h2>
+    <!-- Visión General -->
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Visión General</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
         <div class="metric-card">
-            <div class="metric-title">Acessaram a Página</div>
+            <div class="metric-title">Accedieron a la Página</div>
             <div class="metric-value" id="val-etapa_1">0</div>
         </div>
         <div class="metric-card">
-            <div class="metric-title">Iniciaram o Quiz</div>
+            <div class="metric-title">Iniciaron el Quiz</div>
             <div class="metric-value" id="val-click_start">0</div>
         </div>
         <div class="metric-card">
-            <div class="metric-title">Tela Preocupante</div>
+            <div class="metric-title">Pantalla Preocupante</div>
             <div class="metric-value" id="val-screen_preocupante">0</div>
         </div>
         <div class="metric-card">
-            <div class="metric-title">Tela Entendemos</div>
+            <div class="metric-title">Pantalla Entendemos</div>
             <div class="metric-value" id="val-screen_entendemos">0</div>
         </div>
         <div class="metric-card">
-            <div class="metric-title">Chegaram no Resultado</div>
+            <div class="metric-title">Llegaron al Resultado</div>
             <div class="metric-value" id="val-pagina_resultado">0</div>
         </div>
     </div>
 
     <!-- Funil Detalhado -->
-    <h2 class="text-xl font-bold text-gray-800 mb-4">Funil de Perguntas (Onde estão saindo?)</h2>
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Embudo de Preguntas (¿Dónde se están yendo?)</h2>
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-8" id="funnel-container">
         <!-- Injetado via JS -->
-        <div class="p-8 text-center text-gray-500">Carregando dados...</div>
+        <div class="p-8 text-center text-gray-500">Cargando datos...</div>
     </div>
 </div>
 
@@ -77,20 +77,20 @@
     ];
 
     const metricLabels = {
-        'etapa_1': 'Visitaram a Página Inicial',
-        'click_start': '>>> Clicaram em Iniciar Quiz',
-        'etapa_2': '1. Qual a idade dela?',
-        'etapa_3': '3. Qual o nome dela?',
-        'etapa_4': '4. Gênero',
-        'etapa_5': '5. Ela foi diagnosticada?',
-        'etapa_6': '6. Qual a maior dificuldade dela?',
-        'screen_preocupante': '>> Tela Intermediária: "Isso é preocupante"',
-        'screen_entendemos': '>> Tela Intermediária: "Nós entendemos"',
-        'etapa_7': '7. A rotina costuma ter brigas?',
-        'etapa_8': '8. Ela tem baixa autoestima?',
-        'etapa_9': '9. Como a escola lida?',
-        'etapa_10': '10. Você quer construir uma rotina?',
-        'pagina_resultado': '>> PÁGINA DE VENDAS (Resultado)'
+        'etapa_1': 'Visitaron la Página Inicial',
+        'click_start': '>>> Hicieron clic en Iniciar Quiz',
+        'etapa_2': '1. ¿Cuál es su edad?',
+        'etapa_3': '3. ¿Cuál es su nombre?',
+        'etapa_4': '4. Género',
+        'etapa_5': '5. ¿Fue diagnosticado/a?',
+        'etapa_6': '6. ¿Cuál es su mayor dificultad?',
+        'screen_preocupante': '>> Pantalla Intermedia: "Eso es preocupante"',
+        'screen_entendemos': '>> Pantalla Intermedia: "Nosotros entendemos"',
+        'etapa_7': '7. ¿La rutina suele tener peleas?',
+        'etapa_8': '8. ¿Tiene baja autoestima?',
+        'etapa_9': '9. ¿Cómo lo maneja la escuela?',
+        'etapa_10': '10. ¿Quieres construir una rutina?',
+        'pagina_resultado': '>> PÁGINA DE VENTAS (Resultado)'
     };
 
     async function fetchMetric(name) {
@@ -109,7 +109,7 @@
 
     async function loadMetrics() {
         const btn = document.querySelector('button');
-        btn.innerHTML = 'Carregando...';
+        btn.innerHTML = 'Cargando...';
         btn.disabled = true;
 
         const results = {};
@@ -119,7 +119,7 @@
             results[name] = await fetchMetric(name);
         }));
 
-        // Atualiza Visão Geral
+        // Atualiza Visión General
         if(document.getElementById('val-etapa_1')) document.getElementById('val-etapa_1').innerText = results['etapa_1'];
         if(document.getElementById('val-click_start')) document.getElementById('val-click_start').innerText = results['click_start'];
         if(document.getElementById('val-screen_preocupante')) document.getElementById('val-screen_preocupante').innerText = results['screen_preocupante'];
@@ -153,7 +153,7 @@
 
         document.getElementById('funnel-container').innerHTML = html;
 
-        btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> Atualizar';
+        btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> Actualizar';
         btn.disabled = false;
     }
 

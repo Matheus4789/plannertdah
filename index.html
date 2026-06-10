@@ -1,7 +1,73 @@
-<!DOCTYPE html>
-<html lang="es" class="h-full antialiased poppins_2eb0a7b-module__UaL_5W__variable">
-<head>
-<script
+<!doctype html>
+<html
+  lang="es"
+  class="h-full antialiased poppins_2eb0a7b-module__UaL_5W__variable"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="/_next/static/media/47fe1b7cd6e6ed85-s.p.0~mcdl10zdfb3.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/4b766aa38fdaaae3-s.p.0cbnlo4n.czwi.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/829ba4228c966254-s.p.0ub.k0om~_-xi.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/8e6fa89aa22d24ec-s.p.0uvzar8hswo3p.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/a218039a3287bcfd-s.p.17-1enzs_j91b.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/e2334d715941921e-s.p.12skym0rqknxy.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="css/0y9nzhsfipnuc.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/_next/static/chunks/0-4oo_oi06i0r.js"
+    />
+    <script src="js/0kys8uy09toov.js" async=""></script>
+    <script src="js/0qtz4meecy2cb.js" async=""></script>
+    <script src="js/0v9c2uadhpd-i.js" async=""></script>
+    <script src="js/0pqt~8bl3ukh4.js" async=""></script>
+    <script src="js/turbopack-10d4.bk9c286i.js" async=""></script>
+    <script src="js/0klsv.ufr07qh.js" async=""></script>
+    <script src="js/0d3shmwh5_nmn.js" async=""></script>
+    <script src="js/0ka051yepewro.js" async=""></script>
+    <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
   data-utmify-prevent-subids
@@ -10,125 +76,517 @@
   async
   defer
 ></script>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="fonts/47fe1b7cd6e6ed85-s.p.0~mcdl10zdfb3.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" href="fonts/4b766aa38fdaaae3-s.p.0cbnlo4n.czwi.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" href="fonts/829ba4228c966254-s.p.0ub.k0om~_-xi.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" href="fonts/8e6fa89aa22d24ec-s.p.0uvzar8hswo3p.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" href="fonts/a218039a3287bcfd-s.p.17-1enzs_j91b.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" href="fonts/e2334d715941921e-s.p.12skym0rqknxy.woff2" as="font" crossorigin="" type="font/woff2">
-<link rel="preload" as="image" href="images/capa-planner.png">
-<link rel="stylesheet" href="css/01lrgm.uvab5..css" data-precedence="next">
-<title>Planner TDAH Productivo Kids</title>
-<meta name="description" content="Planner personalizado para niños con TDAH — hecho para que padres e hijos lo usen juntos.">
-<link rel="icon" href="images/favicon.ico" sizes="256x256" type="image/x-icon">
-<style>
-    .quiz-step { display: none; }
-    .quiz-step.active { display: block; }
-    .option-selected { border-color: #fb923c !important; background-color: #fff7ed !important; transform: scale(1.02); }
-    .interstitial-screen { display: none; }
-    .interstitial-screen.active { display: flex; }
-
-    /* Shimmer animation for CTA button */
-    @keyframes shimmer {
-        0% { background-position: -200% center; }
-        100% { background-position: 200% center; }
-    }
-    .btn-shimmer {
-        background: linear-gradient(110deg, #f97316 0%, #f97316 40%, #fbbf24 50%, #f97316 60%, #f97316 100%);
-        background-size: 200% 100%;
-        animation: shimmer 2.5s ease-in-out infinite;
-    }
-    .btn-shimmer:hover {
-        background: #ea580c;
-        animation: none;
-    }
-
-    /* Subtle pulse for CTA (runs 3 times then stops) */
-    @keyframes gentlePulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.03); }
-    }
-    .btn-pulse {
-        animation: gentlePulse 1.5s ease-in-out 3;
-    }
-
-    /* Testimonial carousel */
-    .testimonial-track {
-        display: flex;
-        gap: 12px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding-bottom: 8px;
-    }
-    .testimonial-track::-webkit-scrollbar { display: none; }
-    .testimonial-track > div {
-        scroll-snap-align: center;
-        flex: 0 0 85%;
-        max-width: 320px;
-    }
-
-    /* Roulette Styles */
-    .roulette-container {
-        position: relative;
-        width: 280px;
-        height: 280px;
-        margin: 0 auto;
-        border-radius: 50%;
-        border: 4px solid #f97316;
-        overflow: hidden;
-        box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.4);
-    }
-    .roulette-wheel {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: conic-gradient(
-            #fb923c 0deg 90deg, 
-            #f59e0b 90deg 180deg, 
-            #f97316 180deg 270deg, 
-            #fbbf24 270deg 360deg
-        );
-        transition: transform 3.5s cubic-bezier(0.1, 0.7, 0.1, 1);
-        position: relative;
-    }
-    .roulette-text {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-    }
-    .roulette-text div {
-        position: absolute;
-        width: 100%; height: 100%;
-        text-align: center;
-        padding-top: 15px;
-        font-weight: 900;
-        font-size: 26px;
-        color: white;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    }
-    .rt-1 { transform: rotate(45deg); }   /* 20% OFF */
-    .rt-2 { transform: rotate(135deg); }  /* 80% OFF */
-    .rt-3 { transform: rotate(225deg); }  /* 40% OFF */
-    .rt-4 { transform: rotate(315deg); }  /* 50% OFF */
-    .roulette-pointer {
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 25px solid #b45309;
-        z-index: 10;
-        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
-    }
-</style>
-<!-- Meta Pixel Code -->
+    <meta name="next-size-adjust" content="" />
+    <title>
+      TDAH y rendimiento escolar: cómo ayudar a tu hijo a aprender mejor
+    </title>
+    <meta
+      name="description"
+      content="Guía educativa para padres: comprende cómo el TDAH afecta el rendimiento escolar y descubre estrategias prácticas para apoyar a tu hijo en casa y en la escuela."
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      href="images/favicon.ico"
+      sizes="256x256"
+      type="image/x-icon"
+    />
+    <script src="js/03~yq9q893hmn.js" nomodule=""></script>
+  </head>
+  <body
+    class="min-h-full flex flex-col bg-[#fffbf5] font-[family-name:var(--font-poppins)]"
+  >
+    <div hidden=""><!--$--><!--/$--></div>
+    <main
+      class="min-h-screen bg-gradient-to-b from-[#fffbf5] via-[#fff8ee] to-[#fff4e3]"
+    >
+      <header
+        class="border-b border-orange-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10"
+      >
+        <div
+          class="max-w-3xl mx-auto px-5 py-3 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-2">
+            <div
+              class="w-7 h-7 bg-orange-400 rounded-full flex items-center justify-center text-sm"
+            >
+              💡
+            </div>
+            <span
+              class="font-semibold text-orange-700 text-sm tracking-wide uppercase"
+              >TDAH Productivo Kids</span
+            >
+          </div>
+          <span class="text-xs text-amber-700 font-medium hidden sm:inline"
+            >Contenido educativo</span
+          >
+        </div>
+      </header>
+      <article class="max-w-3xl mx-auto px-5 py-10">
+        <div class="flex justify-center mb-6">
+          <span
+            class="bg-amber-100 text-amber-700 text-xs font-semibold px-4 py-1.5 rounded-full border border-amber-200"
+            >📚 Contenido Educativo Gratuito</span
+          >
+        </div>
+        <h1
+          class="text-3xl sm:text-4xl font-extrabold text-[#7c2d12] leading-tight mb-4 text-center tracking-tight"
+        >
+          TDAH y rendimiento escolar:<br /><span class="text-orange-500"
+            >cómo ayudar a tu hijo a aprender mejor</span
+          >
+        </h1>
+        <p class="text-center text-sm text-amber-700 mb-10">
+          Actualizado en 2026 · Lectura de 7 minutos
+        </p>
+        <div
+          class="prose prose-amber max-w-none mb-10 space-y-4 text-[#3f2c1f] leading-relaxed"
+        >
+          <p>
+            Cuando un niño con TDAH empieza a tener malas notas, olvida la
+            tarea en casa o “no puede quedarse quieto en clase”, la primera
+            reacción de muchos padres es exigir más disciplina. Pero estudios de la
+            Academia Americana de Pediatría muestran que el problema raramente es
+            falta de esfuerzo — y casi siempre es falta de
+            <strong>un sistema adaptado a su cerebro</strong>.
+          </p>
+          <p>
+            El TDAH (Trastorno por Déficit de Atención e Hiperactividad) afecta
+            funciones ejecutivas como organización, memoria de trabajo, control
+            de impulsos y gestión del tiempo. Todo esto se exige todo el tiempo
+            dentro de un salón de clases. Sin el apoyo adecuado, estos
+            niños entran en un ciclo de frustración que confunde la dificultad
+            neurológica con “falta de voluntad”.
+          </p>
+          <p>
+            Esta guía reúne lo que investigadores y neuropsicopedagogos recomiendan
+            para los padres que desean apoyar el rendimiento escolar de su hijo con TDAH —
+            sin peleas, sin chantajes y sin etiquetar al niño como “problema”.
+          </p>
+        </div>
+        <h2 class="text-2xl font-extrabold text-[#7c2d12] mb-5 mt-12">
+          Señales de dificultad escolar por edad
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-4 mb-10">
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm"
+          >
+            <div
+              class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-1"
+            >
+              4 a 6 años
+            </div>
+            <div class="font-bold text-[#7c2d12] mb-3">Preescolar</div>
+            <ul class="space-y-2 text-sm text-amber-900">
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>No puede escuchar historias hasta el final</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Cambia de actividad cada pocos minutos</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Tiene dificultad para seguir reglas de juegos simples</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm"
+          >
+            <div
+              class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-1"
+            >
+              7 a 10 años
+            </div>
+            <div class="font-bold text-[#7c2d12] mb-3">Años iniciales</div>
+            <ul class="space-y-2 text-sm text-amber-900">
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Olvida el material en casa o en la escuela</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Tarda mucho más que sus compañeros en la tarea</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Letra desorganizada y cuadernos desordenados</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm"
+          >
+            <div
+              class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-1"
+            >
+              11 a 14 años
+            </div>
+            <div class="font-bold text-[#7c2d12] mb-3">Preadolescencia</div>
+            <ul class="space-y-2 text-sm text-amber-900">
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Las notas bajan incluso entendiendo la materia</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>No puede estudiar para el examen solo</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-400 mt-0.5">•</span
+                ><span>Conflictos frecuentes con profesores</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2 class="text-2xl font-extrabold text-[#7c2d12] mb-5 mt-12">
+          Señales de atención que merecen cuidado
+        </h2>
+        <p class="text-[#3f2c1f] mb-5 leading-relaxed">
+          Los niños con TDAH no “eligen” ignorar comandos. Tienen un cerebro
+          que procesa la información de manera diferente. Presta atención si notas:
+        </p>
+        <ul class="space-y-3 mb-10">
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Dificuldade em manter o foco em tarefas que exigem esforço
+              mental</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Olvida compromisos, materiales e instrucciones recién dadas</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >No termina lo que empieza — incluso cosas que le gustan</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Distrai-se com qualquer barulho, movimento ou pensamento
+              próprio</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Parece ‘no escuchar’ cuando se le habla directamente</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Reage de forma intensa a pequenas frustrações ou mudanças de
+              rotina</span
+            >
+          </li>
+          <li
+            class="flex gap-3 bg-white border border-orange-100 rounded-xl p-4 shadow-sm"
+          >
+            <span class="text-orange-500 font-bold">✓</span
+            ><span class="text-[#3f2c1f] text-sm leading-relaxed"
+              >Tem o sono agitado, demora pra adormecer ou acorda várias
+              vezes</span
+            >
+          </li>
+        </ul>
+        <div
+          class="my-12 bg-amber-50 border border-amber-200 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-center"
+        >
+          <div class="text-3xl">📖</div>
+          <div class="flex-1 text-center sm:text-left">
+            <p class="text-[#7c2d12] font-semibold text-sm mb-1">
+              ¿Quieres un material práctico con todo esto aplicado?
+            </p>
+            <p class="text-amber-800 text-xs leading-relaxed">
+              Preparamos un planner listo para imprimir, con rutina, sistema de
+              recompensas y checklist escolar adaptado al cerebro con TDAH.
+            </p>
+          </div>
+          <a
+            class="text-sm font-bold text-orange-700 underline underline-offset-4 hover:text-orange-800 whitespace-nowrap"
+            href="https://pay.hotmart.com/W106095082X?checkoutMode=10"
+            >Ver el material →</a
+          >
+        </div>
+        <h2 class="text-2xl font-extrabold text-[#7c2d12] mb-5 mt-12">
+          6 estrategias para apoyar en casa
+        </h2>
+        <div class="space-y-4 mb-10">
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              1
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Crea una rutina visual
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                Los niños con TDAH necesitan ver lo que va a suceder. Usa un
+              cuadro con horarios, tareas y símbolos. Lo que está en el papel
+              libera espacio en el cerebro para enfocarse en lo que importa.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              2
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Divide las tareas en micropasos
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                “Haz la tarea” es demasiado abstracto. “Abre el cuaderno, lee el
+              enunciado, escribe el número de la página” es ejecutable. Divide todo
+              en acciones pequeñas.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              3
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Usa el método de los 25 minutos
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                Pomodoro infantil: 25 minutos de enfoque + 5 de pausa. El cerebro
+              con TDAH responde mejor a sprints cortos que a maratones de
+              estudio.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              4
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Refuerza el progreso, no el resultado
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                En lugar de “sacaste buena nota, felicidades”, di “te sentaste y lo hiciste
+              sin rendirte, eso es lo que importa”. El TDAH necesita retroalimentación
+              del proceso.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              5
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Reduce estímulos en el ambiente de estudio
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                Quita celular, TV y juguetes de la mesa. Usa auriculares con música
+              instrumental si ayuda. El cerebro con TDAH no filtra el ruido —
+              tú necesitas filtrarlo por él.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-orange-100 rounded-2xl p-5 shadow-sm flex gap-4"
+          >
+            <div
+              class="w-10 h-10 bg-orange-100 text-orange-600 font-extrabold rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              6
+            </div>
+            <div>
+              <div class="font-bold text-[#7c2d12] mb-1">
+                Mantén contacto directo con la escuela
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">
+                Acuerda con el profesor una señal discreta (un toque en la mesa)
+              cuando note dispersión. Y pide una agenda escolar
+              compartida — no dependas solo de lo que el niño recuerde.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-2xl font-extrabold text-[#7c2d12] mb-5 mt-12">
+          Cuándo es momento de buscar un profesional
+        </h2>
+        <div class="bg-white border border-orange-100 rounded-2xl p-6 mb-12">
+          <p class="text-[#3f2c1f] mb-4 leading-relaxed">
+            Las estrategias en casa ayudan mucho, pero existen situaciones en que el
+            apoyo de un especialista es indispensable. Busca un
+            <strong
+              >neuropediatra, psiquiatra infantil o neuropsicopedagogo</strong
+            >
+            si notas:
+          </p>
+          <ul class="space-y-2 text-sm text-amber-900">
+            <li class="flex gap-2">
+              <span class="text-orange-500">→</span>Queda de notas persistente,
+              mesmo com apoio em casa
+            </li>
+            <li class="flex gap-2">
+              <span class="text-orange-500">→</span>Sofrimento emocional da
+              criança (tristeza, ansiedade, isolamento)
+            </li>
+            <li class="flex gap-2">
+              <span class="text-orange-500">→</span>Conflitos sociais frequentes
+              na escola
+            </li>
+            <li class="flex gap-2">
+              <span class="text-orange-500">→</span>Comportamentos agressivos ou
+              de risco
+            </li>
+            <li class="flex gap-2">
+              <span class="text-orange-500">→</span>Suspeita de comorbidades
+              (ansiedade, dislexia, TOD)
+            </li>
+          </ul>
+        </div>
+        <section
+          class="my-14 relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400 p-7 sm:p-10 shadow-2xl"
+        >
+          <div
+            class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"
+          ></div>
+          <div
+            class="absolute -bottom-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"
+          ></div>
+          <div class="relative">
+            <div
+              class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4"
+            >
+              Material exclusivo
+            </div>
+            <h3
+              class="text-2xl sm:text-3xl font-extrabold text-white leading-tight mb-3"
+            >
+              Aprende las estrategias y aplícalas<br />en casa a partir de hoy
+            </h3>
+            <p class="text-orange-50 text-sm sm:text-base mb-6 leading-relaxed">
+              Un planner listo para imprimir + sistema de recompensas +
+              checklist escolar, todos hechos específicamente para el cerebro de
+              niños con TDAH.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-7">
+              <div
+                class="bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl p-3 text-center"
+              >
+                <div class="text-2xl mb-1">📋</div>
+                <div class="text-white text-xs font-semibold leading-tight">
+                  Planner imprimible
+                </div>
+              </div>
+              <div
+                class="bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl p-3 text-center"
+              >
+                <div class="text-2xl mb-1">🕒</div>
+                <div class="text-white text-xs font-semibold leading-tight">
+                  Rutina visual
+                </div>
+              </div>
+              <div
+                class="bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl p-3 text-center"
+              >
+                <div class="text-2xl mb-1">⭐</div>
+                <div class="text-white text-xs font-semibold leading-tight">
+                  Sistema de recompensas
+                </div>
+              </div>
+              <div
+                class="bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl p-3 text-center"
+              >
+                <div class="text-2xl mb-1">🎁</div>
+                <div class="text-white text-xs font-semibold leading-tight">
+                  Bonos exclusivos
+                </div>
+              </div>
+            </div>
+            <a
+              class="block w-full bg-white text-orange-600 font-extrabold text-center py-5 rounded-2xl text-lg shadow-xl hover:bg-orange-50 active:scale-[0.98] transition-all tracking-wide"
+              href="https://pay.hotmart.com/W106095082X?checkoutMode=10"
+              >Quiero acceder al material →</a
+            >
+            <div
+              class="flex flex-wrap justify-center gap-x-5 gap-y-2 mt-5 text-orange-50 text-xs font-medium"
+            >
+              <span>🔒 Compra 100% segura</span><span>⚡ Acceso inmediato</span
+              ><span>✅ Garantía de 7 días</span>
+            </div>
+          </div>
+        </section>
+        <div
+          class="bg-amber-50 border-l-4 border-amber-300 rounded-r-lg p-4 mb-10"
+        >
+          <p class="text-xs text-amber-800 leading-relaxed">
+            <strong>Aviso:</strong> Este contenido tiene carácter exclusivamente
+            informativo y educativo. No sustituye consulta con médico,
+            psicólogo u otro profesional de salud. El diagnóstico de TDAH debe
+            ser realizado por un especialista calificado, basado en evaluación
+            clínica completa.
+          </p>
+        </div>
+      </article>
+      <footer class="border-t border-orange-100 bg-white/60 mt-10">
+        <div class="max-w-3xl mx-auto px-5 py-6 text-center">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <div
+              class="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center text-xs"
+            >
+              💡
+            </div>
+            <span class="font-semibold text-orange-700 text-sm"
+              >TDAH Productivo Kids</span
+            >
+          </div>
+          <p class="text-xs text-amber-700">
+            ©
+            <!-- -->2026<!-- -->
+            TDAH Productivo Kids · Contenido educativo para padres
+          </p>
+        </div>
+      </footer>
+    </main>\n<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -144,873 +602,4 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1244702767538482&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-</head>
-<body class="min-h-full flex flex-col bg-[#fffbf5] font-[family-name:var(--font-poppins)]">
-<main class="min-h-screen bg-gradient-to-b from-[#fffbf5] via-[#fff8ee] to-[#fff4e3] flex items-center justify-center px-5 py-14">
-
-<!-- LANDING PAGE -->
-<div class="w-full max-w-lg animate-fade-in pb-24" id="landing-container">
-
-<!-- COMPACT HERO: Headline + CTA visible without scroll -->
-<div class="flex justify-center mb-4">
-<div class="relative">
-<img src="images/capa-planner.png" alt="Planner TDAH Productivo Kids" width="160" height="160" class="rounded-2xl shadow-lg object-contain">
-<div class="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-md">⭐ 4.9/5</div>
-</div>
-</div>
-<h1 class="text-3xl sm:text-4xl font-extrabold text-center text-[#7c2d12] leading-[1.15] mb-2 tracking-tight">Descubre el sistema que <span class="text-orange-500">transforma</span> la rutina de niños con TDAH
-</h1>
-<p class="text-center text-sm text-amber-700 mb-4 leading-relaxed max-w-sm mx-auto">Responde a un <strong>quiz rápido de 2 minutos</strong> y recibe un planner <strong>100% personalizado</strong> para tu hijo — para que lo usen juntos.</p>
-
-<!-- INLINE CTA (visible without scroll) -->
-<button onclick="startQuiz()" class="btn-shimmer btn-pulse block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide mb-4">Comenzar el Quiz Gratis →</button>
-<p class="text-center text-xs text-amber-600 mb-6 font-medium">Toma menos de 2 minutos · 100% gratuito · Para niños de 4 a 14 años</p>
-
-
-<!-- BENEFITS (compact) -->
-<div class="bg-white rounded-2xl px-4 py-4 mb-4 border border-orange-100 shadow-sm">
-<div class="grid grid-cols-2 gap-2">
-<div class="flex items-start gap-2 text-sm text-amber-900">
-<span class="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
-<span class="font-medium">Combate la procrastinación</span>
-</div>
-<div class="flex items-start gap-2 text-sm text-amber-900">
-<span class="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
-<span class="font-medium">Reduce conflictos en casa</span>
-</div>
-<div class="flex items-start gap-2 text-sm text-amber-900">
-<span class="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
-<span class="font-medium">Organiza la rutina escolar</span>
-</div>
-<div class="flex items-start gap-2 text-sm text-amber-900">
-<span class="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
-<span class="font-medium">Aumenta la autoconfianza</span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-center gap-1.5">
-<div class="flex text-orange-400 text-sm">★★★★★</div>
-<p class="text-xs text-amber-700 font-semibold ml-1">+2.400 familias ya transformaron la rutina</p>
-</div>
-</div>
-
-<!-- STICKY BUTTON (LANDING PAGE ONLY) -->
-<div id="sticky-btn-container" class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#fffbf5] via-[#fffbf5] to-transparent z-40 pb-6 flex justify-center">
-    <div class="w-full max-w-lg">
-        <button onclick="startQuiz()" class="btn-shimmer block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide active:scale-95">Responder 6 Preguntas →</button>
-    </div>
-</div>
-
-<!-- PROGRESS BAR -->
-<div class="fixed top-0 left-0 right-0 h-2 bg-orange-100 z-50" id="quiz-progress-bar" style="display:none;">
-    <div id="progress-bar" class="h-full bg-orange-400 transition-all duration-700 ease-out" style="width:10%"></div>
-</div>
-
-<!-- QUIZ CONTAINER -->
-<div class="w-full max-w-lg mx-auto px-4 pt-6 pb-24 animate-fade-in" id="quiz-container" style="display:none;">
-
-    <!-- Step 1: Menino ou niña -->
-    <div id="step-1" class="quiz-step active">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug">Seu filho é niño ou niña?</h2>
-        <p class="text-center text-amber-600 text-sm mb-6">Selecciona una opción</p>
-        <div class="grid grid-cols-2 gap-4">
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-3 transition-all duration-200 border-gray-200 bg-white hover:border-orange-200" onclick="selectSingle(1, 'niño', this)">
-                <div class="w-full h-36 rounded-xl overflow-hidden">
-                    <img src="images/menino.jpg" alt="niño" class="w-full h-full object-cover">
-                </div>
-                <span class="font-bold text-amber-800 capitalize text-base">niño</span>
-            </button>
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-3 transition-all duration-200 border-gray-200 bg-white hover:border-orange-200" onclick="selectSingle(1, 'niña', this)">
-                <div class="w-full h-36 rounded-xl overflow-hidden">
-                    <img src="images/menina.jpg" alt="niña" class="w-full h-full object-cover">
-                </div>
-                <span class="font-bold text-amber-800 capitalize text-base">niña</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Step 2: Idade -->
-    <div id="step-2" class="quiz-step">
-        <p class="text-center text-orange-500 font-bold text-sm mb-1" id="gender-stats">4.231 niños</p>
-        <p class="text-center text-amber-600 text-xs mb-5">Ya tienen su Planner TDAH Productivo Kids</p>
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug" id="title-step-2">Quantos años ele tem?</h2>
-        <p class="text-center text-amber-600 text-sm mb-6">Selecciona una opción</p>
-        <div class="grid grid-cols-2 gap-4">
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '4-6', this)">
-                <span class="text-4xl mb-1">🧒</span>
-                <span class="font-bold text-amber-800 text-lg">4-6 años</span>
-                <span class="text-xs text-amber-600 text-center leading-tight">Fase de descubrir el mundo</span>
-            </button>
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '7-9', this)">
-                <span class="text-4xl mb-1">👦</span>
-                <span class="font-bold text-amber-800 text-lg">7-9 años</span>
-                <span class="text-xs text-amber-600 text-center leading-tight">Cuando la escuela empieza a exigir</span>
-            </button>
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '10-12', this)">
-                <span class="text-4xl mb-1">🧑</span>
-                <span class="font-bold text-amber-800 text-lg">10-12 años</span>
-                <span class="text-xs text-amber-600 text-center leading-tight">Preadolescencia + TDAH</span>
-            </button>
-            <button class="option-btn rounded-2xl border-2 p-4 flex flex-col items-center gap-1 transition-all duration-200 bg-white border-gray-200 hover:border-orange-200" onclick="selectSingle(2, '13-14', this)">
-                <span class="text-4xl mb-1">🧑‍🎓</span>
-                <span class="font-bold text-amber-800 text-lg">13-14 años</span>
-                <span class="text-xs text-amber-600 text-center leading-tight">En busca de autonomía</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Step 3: Nome -->
-    <div id="step-3" class="quiz-step">
-        <div class="flex justify-center mb-6">
-            <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-amber-50 rounded-2xl flex items-center justify-center">
-                <span class="text-5xl" id="avatar-emoji">👦</span>
-            </div>
-        </div>
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug" id="title-step-3">¿Cuál es el nombre de tu hijo?</h2>
-        <p class="text-center text-amber-600 text-sm mb-6" id="desc-step-3">Vamos a personalizar el planner con su nombre</p>
-        <input type="text" id="child-name" placeholder="Escribe el nombre..." class="w-full border-2 border-orange-200 rounded-2xl px-5 py-4 text-amber-900 placeholder-amber-300 focus:outline-none focus:border-orange-400 text-lg mb-2" oninput="checkInput(3)">
-    </div>
-
-    <!-- Step 4: Eliminar da rotina -->
-    <div id="step-4" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">Qué es lo que más quieres eliminar de la rutina de?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las que quieras</p>
-        <div class="flex flex-col gap-2" id="options-4"></div>
-    </div>
-
-    <!-- Step 5: Áreas com desafios -->
-    <div id="step-5" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">En qué áreas el TDAH trae más desafíos para?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las que quieras</p>
-        <div class="flex flex-col gap-2" id="options-5"></div>
-    </div>
-
-    <!-- Step 6: Distrações -->
-    <div id="step-6" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">Qué lo distrae más a?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las que quieras</p>
-        <div class="flex flex-col gap-2" id="options-6"></div>
-    </div>
-
-    <!-- Step 7: Energia -->
-    <div id="step-7" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">¿Cómo maneja mejor la energía durante el día?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las que quieras</p>
-        <div class="flex flex-col gap-2" id="options-7"></div>
-    </div>
-
-    <!-- Step 8: Planner essenciais -->
-    <div id="step-8" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">Qué NO puede faltar en el planner de?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las que quieras</p>
-        <div class="flex flex-col gap-2" id="options-8"></div>
-    </div>
-
-    <!-- Step 9: Estruturar rotina -->
-    <div id="step-9" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">Cómo deseas estructurar la rutina de para reducir los conflictos?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las opciones que prefieras</p>
-        <div class="flex flex-col gap-2" id="options-9"></div>
-    </div>
-
-    <!-- Step 10: Extras -->
-    <div id="step-10" class="quiz-step">
-        <h2 class="text-xl font-extrabold text-center text-[#92400e] mb-1 leading-snug dynamic-name">Y qué más te gustaría incluir en el planner de?</h2>
-        <p class="text-center text-amber-500 text-sm mb-3">Selecciona las opciones que prefieras</p>
-        <div class="flex flex-col gap-2" id="options-10"></div>
-    </div>
-
-    <!-- NAV BUTTONS -->
-    <div class="fixed bottom-0 left-0 right-0 bg-[#fffbf5] border-t border-orange-100 px-4 py-4 flex items-center gap-3 z-40" id="nav-buttons">
-        <button id="btn-back" class="hidden py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-200 bg-white border-2 border-orange-200 text-orange-500" onclick="prevStep()">←</button>
-        <button id="btn-next" disabled class="flex-1 py-4 rounded-2xl font-bold text-lg transition-all duration-200 bg-gray-200 text-gray-400 cursor-not-allowed" onclick="nextStep()">Continuar →</button>
-    </div>
-</div>
-
-<!-- INTERSTITIAL: Preocupante (appears after step 6) -->
-<div class="interstitial-screen items-center justify-center min-h-screen px-4 py-8" id="screen-preocupante" style="display:none;">
-    <div class="bg-white rounded-3xl shadow-lg p-8 border border-orange-100 w-full max-w-lg">
-        <!-- Animated: ⚠️ + title (J>=1) -->
-        <div class="text-center mb-6 transition-all duration-500" id="preo-title" style="opacity:0;transform:translateY(14px)">
-            <span class="text-3xl mb-2 block">⚠️</span>
-            <h2 class="text-xl font-bold text-orange-700">Preocupante...</h2>
-        </div>
-        <!-- Animated: subtitle (J>=2) -->
-        <div class="transition-all duration-500 mb-5" id="preo-subtitle" style="opacity:0;transform:translateY(10px)">
-            <p class="text-sm text-amber-700 text-center" id="preo-subtitle-text">Hasta ahora identificamos que la situación está así:</p>
-        </div>
-        <!-- Animated: progress bars (J>=3,4,5,6) -->
-        <div class="flex flex-col gap-4 mb-6" id="preo-bars">
-            <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
-                <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700" id="preo-label-0">⏰ Dificultad para seguir rutinas</span>
-                    <span class="text-sm font-bold text-red-500" id="preo-pct-0">82%</span>
-                </div>
-                <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-0" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
-                </div>
-            </div>
-            <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
-                <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700" id="preo-label-1">📚 Conflictos con las tareas</span>
-                    <span class="text-sm font-bold text-red-500" id="preo-pct-1">78%</span>
-                </div>
-                <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-1" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
-                </div>
-            </div>
-            <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
-                <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700" id="preo-label-2">🎒 Desorganización escolar</span>
-                    <span class="text-sm font-bold text-red-500" id="preo-pct-2">74%</span>
-                </div>
-                <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-2" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
-                </div>
-            </div>
-            <div class="transition-all duration-500" style="opacity:0;transform:translateY(10px)">
-                <div class="flex justify-between items-center mb-1.5">
-                    <span class="text-sm font-medium text-gray-700" id="preo-label-3">😔 Baja autoconfianza</span>
-                    <span class="text-sm font-bold text-red-500" id="preo-pct-3">71%</span>
-                </div>
-                <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-[1400ms] ease-out" id="preo-fill-3" style="width:0%;background:linear-gradient(to right, #22c55e, #f59e0b, #ef4444)"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Animated: ¿Te identificas? + buttons (after all bars) -->
-        <div class="transition-all duration-500" id="preo-buttons" style="opacity:0;transform:translateY(14px);pointer-events:none">
-            <h3 class="text-lg font-bold text-center text-[#92400e] mb-4">¿Te identificas?</h3>
-            <div class="flex flex-col gap-3">
-                <div class="transition-all duration-[400ms]" style="opacity:0;transform:translateY(8px)" id="preo-opt-0">
-                    <button onclick="clickPreocupante()" class="flex items-center justify-between w-full border-2 border-orange-100 rounded-2xl px-4 py-3 hover:border-orange-400 hover:bg-orange-50 transition-all duration-200 active:scale-[0.98]">
-                        <span class="flex items-center gap-3 text-sm font-medium text-amber-800"><span class="text-xl">😓</span>Sí, es exactamente así</span>
-                        <span class="text-orange-400 text-lg">›</span>
-                    </button>
-                </div>
-                <div class="transition-all duration-[400ms]" style="opacity:0;transform:translateY(8px);transition-delay:120ms" id="preo-opt-1">
-                    <button onclick="clickPreocupante()" class="flex items-center justify-between w-full border-2 border-orange-100 rounded-2xl px-4 py-3 hover:border-orange-400 hover:bg-orange-50 transition-all duration-200 active:scale-[0.98]">
-                        <span class="flex items-center gap-3 text-sm font-medium text-amber-800"><span class="text-xl">🙂</span>No, está mejor que eso</span>
-                        <span class="text-orange-400 text-lg">›</span>
-                    </button>
-                </div>
-                <div class="transition-all duration-[400ms]" style="opacity:0;transform:translateY(8px);transition-delay:240ms" id="preo-opt-2">
-                    <button onclick="clickPreocupante()" class="flex items-center justify-between w-full border-2 border-orange-100 rounded-2xl px-4 py-3 hover:border-orange-400 hover:bg-orange-50 transition-all duration-200 active:scale-[0.98]">
-                        <span class="flex items-center gap-3 text-sm font-medium text-amber-800"><span class="text-xl">😐</span>Más o menos</span>
-                        <span class="text-orange-400 text-lg">›</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- INTERSTITIAL: Entendemos (appears after Preocupante) -->
-<div class="interstitial-screen items-center justify-center min-h-screen px-4 py-8" id="screen-entendemos" style="display:none;">
-    <div class="bg-white rounded-3xl shadow-lg p-8 border border-orange-100 animate-fade-in w-full max-w-lg">
-        <h2 class="text-2xl font-extrabold text-center text-[#92400e] mb-6 leading-snug" id="entendemos-title">Entendemos la situación...</h2>
-        <div class="bg-green-50 border border-green-200 rounded-2xl px-5 py-4 mb-5 text-center">
-            <p class="text-green-800 font-semibold text-sm leading-relaxed">Y garantizamos que la rutina de ustedes será otra después del <strong>Planner TDAH Productivo Kids</strong> 😊</p>
-        </div>
-        <div class="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 mb-7">
-            <p class="text-amber-800 font-bold text-sm mb-4 text-center">✨ Lo que van a lograr: ✨</p>
-            <div class="flex flex-col gap-3">
-                <div class="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-amber-100">
-                    <div class="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-white text-xs font-bold">✓</span></div>
-                    <span class="text-sm text-amber-900 font-medium">Organización y rutina con claridad en el día a día</span>
-                </div>
-                <div class="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-amber-100">
-                    <div class="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-white text-xs font-bold">✓</span></div>
-                    <span class="text-sm text-amber-900 font-medium">Reducción de conflictos y crisis en casa</span>
-                </div>
-                <div class="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-amber-100">
-                    <div class="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-white text-xs font-bold">✓</span></div>
-                    <span class="text-sm text-amber-900 font-medium">Aumento de la autoconfianza y desempeño escolar</span>
-                </div>
-            </div>
-        </div>
-        <button onclick="clickEntendemos()" class="w-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] text-white font-bold py-4 rounded-2xl text-base transition-all duration-200 shadow-md hover:shadow-lg">Ok, continuar creando →</button>
-    </div>
-</div>
-
-<!-- INTERSTITIAL: Loading (appears after step 10) -->
-<div class="interstitial-screen items-center justify-center min-h-screen px-4 py-8" id="screen-loading" style="display:none;">
-    <div class="bg-white rounded-3xl shadow-lg p-6 border border-orange-100 w-full max-w-lg">
-        <div class="rounded-2xl px-4 py-3 text-center mb-5 bg-green-50 border border-green-200">
-            <p class="font-bold text-sm text-green-700" id="loading-title">¡Respuestas recibidas!</p>
-        </div>
-        <div class="relative flex justify-center items-center mb-5" style="height:180px">
-            <div class="relative w-36 h-44 rounded-2xl overflow-hidden shadow-xl z-20 border-2 border-orange-200 transition-all duration-700" id="planner-cover">
-                <img src="images/capa-planner.png" alt="Planner" class="w-full h-full object-cover">
-            </div>
-        </div>
-        <div class="mb-4">
-            <div class="flex justify-between text-xs text-amber-700 mb-1.5">
-                <span class="font-medium" id="loading-status-text">Preparando el planner...</span>
-                <span class="font-bold text-orange-600" id="loading-pct">0%</span>
-            </div>
-            <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div class="h-full rounded-full transition-all duration-100" id="loading-bar" style="width:0%;background:linear-gradient(to right, #f97316, #f59e0b)"></div>
-            </div>
-        </div>
-        <div class="bg-amber-50 border border-amber-100 rounded-2xl p-4">
-            <p class="text-xs font-bold text-amber-700 mb-3" id="checklist-title">Personalizando el planner:</p>
-            <div class="flex flex-col gap-1.5" id="checklist-items"></div>
-        </div>
-    </div>
-</div>
-
-<!-- INTERSTITIAL: Roulette -->
-<div class="interstitial-screen items-center justify-center min-h-screen px-4 py-8" id="screen-roulette" style="display:none;">
-    <div class="bg-white rounded-3xl shadow-lg p-6 border border-orange-100 w-full max-w-lg text-center">
-        <h2 class="text-2xl font-extrabold text-[#92400e] mb-2 leading-snug">¡Felicidades! ¡El planner está listo!</h2>
-        <p class="text-amber-700 text-sm mb-6">Gira la ruleta para ver qué <strong>descuento exclusivo</strong> ganaste para acceder al planner ahora:</p>
-        
-        <div class="roulette-container mb-6">
-            <div class="roulette-pointer"></div>
-            <div class="roulette-wheel" id="roulette-wheel">
-                <div class="roulette-text rt-1"><div>20% OFF</div></div>
-                <div class="roulette-text rt-2"><div>80% OFF</div></div>
-                <div class="roulette-text rt-3"><div>40% OFF</div></div>
-                <div class="roulette-text rt-4"><div>50% OFF</div></div>
-            </div>
-        </div>
-        
-        <button id="btn-spin" onclick="spinRoulette()" class="w-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] text-white font-extrabold py-4 rounded-2xl text-lg transition-all duration-200 shadow-xl border-b-4 border-orange-700 tracking-wide">¡Girar Ruleta!</button>
-        
-        <div id="roulette-result" class="hidden mt-6 bg-green-50 border border-green-200 rounded-2xl p-4 animate-fade-in">
-            <p class="text-green-800 font-extrabold text-lg mb-1">🎉 ¡GANASTE 80% OFF! 🎉</p>
-            <p class="text-green-700 text-sm mb-4">El descuento ya fue aplicado y será válido por 27 minutos.</p>
-            <button onclick="goToResults()" class="btn-shimmer block w-full text-white font-extrabold text-center py-4 rounded-2xl text-lg transition-all duration-200 shadow-lg border-b-4 border-green-700 bg-green-600 tracking-wide active:scale-95">Ver el Planner + Descuento →</button>
-        </div>
-    </div>
-</div>
-
-</main>
-
-<script>
-    // ==========================================
-    // DATA
-    // ==========================================
-    const multiOptions = {
-        4: [
-            {l:"Guerras diarias con las tareas", e:"📚"},
-            {l:"Desorganización constante con todo", e:"🗂️"},
-            {l:"Crisis, llanto y berrinches frecuentes", e:"😭"},
-            {l:"Él/ella se siente incapaz o diferente", e:"😔"},
-            {l:"La escuela se queja y exige todo el tiempo", e:"📣"}
-        ],
-        5: [
-            {l:"Control de la impulsividad", e:"🔥"},
-            {l:"Mantener el enfoque en cualquier actividad", e:"🎯"},
-            {l:"Organización y planificación", e:"📋"},
-            {l:"Gestión del tiempo y horarios", e:"⏰"},
-            {l:"Memorizar tareas y compromisos", e:"🧠"},
-            {l:"Relación con otros niños", e:"👥"}
-        ],
-        6: [
-            {l:"Celular, tablet o televisión", e:"📱"},
-            {l:"Otros niños o personas alrededor", e:"👫"},
-            {l:"Pensamientos que se desvían del tema", e:"💭"},
-            {l:"Tareas pendientes en la cabeza", e:"📝"},
-            {l:"Sonidos y ruidos del ambiente", e:"🔊"}
-        ],
-        7: [
-            {l:"Momentos de juego libre", e:"🎮"},
-            {l:"Alimentación equilibrada y horarios fijos", e:"🥗"},
-            {l:"Pausas entre actividades", e:"⏸️"},
-            {l:"Ejercicio físico o deporte", e:"🏃"},
-            {l:"Rutina de sueño consistente", e:"😴"}
-        ],
-        8: [
-            {l:"Rutina escolar y tareas", e:"✏️"},
-            {l:"Rutina de la mañana y de la noche", e:"🌅"},
-            {l:"Sistema de misiones y recompensas", e:"🏆"},
-            {l:"Control del humor y emociones", e:"💪"},
-            {l:"Seguimiento de lectura y estudios", e:"📖"},
-            {l:"Salud y alimentación", e:"🥗"},
-            {l:"Metas semanales visuales", e:"🎯"}
-        ],
-        9: [
-            {l:"Checklists visuales simples", e:"✅"},
-            {l:"Objetivos y metas diarias", e:"🎯"},
-            {l:"Sistema de recompensas y estrellas", e:"⭐"},
-            {l:"Organización por colores e íconos", e:"🎨"},
-            {l:"Pausas programadas durante el día", e:"⏸️"}
-        ],
-        10: [
-            {l:"Club de lectura infantil", e:"📚"},
-            {l:"Inglés e idiomas", e:"🌍"},
-            {l:"Deportes y actividades físicas", e:"⚽"},
-            {l:"Arte, música y creatividad", e:"🎨"},
-            {l:"Juegos educativos y razonamiento", e:"🧩"},
-            {l:"Habilidades sociales y amistades", e:"👫"}
-        ]
-    };
-
-    // ==========================================
-    // RENDER MULTI-SELECT OPTIONS
-    // ==========================================
-    function renderMultiOptions() {
-        for (let i = 4; i <= 10; i++) {
-            const container = document.getElementById('options-' + i);
-            if (!container || !multiOptions[i]) continue;
-            let html = '';
-            multiOptions[i].forEach((opt) => {
-                html += `
-                <button class="multi-btn-${i} flex items-center justify-between p-4 rounded-2xl border-2 border-gray-200 bg-white hover:border-orange-200 transition-all duration-200 text-left" onclick="toggleMulti(${i}, this)">
-                    <span class="font-semibold text-amber-900 text-[15px] pr-2">${opt.l}</span>
-                    <span class="text-2xl shrink-0">${opt.e}</span>
-                </button>`;
-            });
-            html += `
-            <button class="multi-btn-${i} flex items-center justify-between p-4 rounded-2xl border-2 border-gray-200 bg-white hover:border-orange-200 transition-all duration-200 text-left" onclick="toggleMulti(${i}, this, true)">
-                <span class="font-semibold text-amber-900 text-[15px] pr-2">Todas las opciones anteriores</span>
-                <span class="text-2xl shrink-0"></span>
-            </button>`;
-            container.innerHTML = html;
-        }
-    }
-    renderMultiOptions();
-
-    // ==========================================
-    // STATE
-    // ==========================================
-    let currentStep = 1;
-    let answers = { gender: '', age: '', name: '' };
-    let selections = {};
-    // Screens: 'quiz' | 'preocupante' | 'entendemos' | 'loading'
-    let currentScreen = 'quiz';
-
-    // ==========================================
-    // TRACKING (Daily and All-time)
-    // ==========================================
-    const d = new Date();
-    const todayStr = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-    const baseNamespace = 'plannertdah_metrics_v3';
-    
-    function trackMetric(metric) {
-        try {
-            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_${todayStr}/${metric}/up`).catch(e=>e);
-            fetch(`https://api.counterapi.dev/v1/${baseNamespace}_all/${metric}/up`).catch(e=>e);
-        } catch(e) {
-            console.error('Metrics error:', e);
-        }
-    }
-
-    // ==========================================
-    // START QUIZ
-    // ==========================================
-    function startQuiz() {
-        trackMetric('click_start');
-        document.getElementById('landing-container').style.display = 'none';
-        const stickyBtn = document.getElementById('sticky-btn-container');
-        if(stickyBtn) stickyBtn.style.display = 'none';
-        document.getElementById('quiz-progress-bar').style.display = 'block';
-        document.getElementById('quiz-container').style.display = 'block';
-        document.querySelector('main').classList.remove('bg-gradient-to-b', 'from-[#fffbf5]', 'via-[#fff8ee]', 'to-[#fff4e3]', 'flex', 'items-center', 'justify-center', 'px-5', 'py-14');
-        window.scrollTo(0, 0);
-    }
-
-    // ==========================================
-    // SHOW/HIDE SCREENS
-    // ==========================================
-    const countedScreens = new Set();
-    function showScreen(screen) {
-        currentScreen = screen;
-        if (!countedScreens.has('screen_' + screen)) {
-            countedScreens.add('screen_' + screen);
-            trackMetric('screen_' + screen);
-        }
-        // Hide everything
-        document.getElementById('quiz-container').style.display = 'none';
-        document.getElementById('screen-preocupante').style.display = 'none';
-        document.getElementById('screen-entendemos').style.display = 'none';
-        document.getElementById('screen-loading').style.display = 'none';
-        document.getElementById('screen-roulette').style.display = 'none';
-
-        if (screen === 'quiz') {
-            document.getElementById('quiz-container').style.display = 'block';
-        } else if (screen === 'preocupante') {
-            document.getElementById('screen-preocupante').style.display = 'flex';
-            startPreocupanteAnimation();
-        } else if (screen === 'entendemos') {
-            document.getElementById('screen-entendemos').style.display = 'flex';
-            if (answers.name) {
-                const prepDe = answers.gender === 'niña' ? 'de' : 'de';
-                document.getElementById('entendemos-title').innerHTML = `Entendemos a situação ${prepDe} ${answers.name}...`;
-            }
-        } else if (screen === 'loading') {
-            document.getElementById('screen-loading').style.display = 'flex';
-            startLoadingAnimation();
-        } else if (screen === 'roulette') {
-            document.getElementById('screen-roulette').style.display = 'flex';
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // ==========================================
-    // PREOCUPANTE ANIMATION (matches original timings)
-    // ==========================================
-    let preoTimeouts = [];
-    function startPreocupanteAnimation() {
-        // Reset everything
-        preoTimeouts.forEach(clearTimeout);
-        preoTimeouts = [];
-        const bars = document.querySelectorAll('#preo-bars > div');
-        const barFills = document.querySelectorAll('#preo-bars .h-full');
-        const pcts = [82, 78, 74, 71];
-
-        // Set dynamic labels from user's answers if possible
-        let selectedOptions = [];
-        if(selections[4]) selectedOptions = selectedOptions.concat(selections[4]);
-        if(selections[5]) selectedOptions = selectedOptions.concat(selections[5]);
-        
-        const fallbackLabels = [
-            "⏰ Dificultad para seguir rutinas",
-            "📚 Conflictos con las tareas",
-            "🎒 Desorganización escolar",
-            "😔 Baja autoconfianza"
-        ];
-        
-        for (let i = 0; i < 4; i++) {
-            let labelText = fallbackLabels[i];
-            if (selectedOptions[i]) {
-                const optText = selectedOptions[i];
-                // Find emoji for this option from multiOptions
-                let emoji = "⚠️";
-                let found = false;
-                for (let j = 4; j <= 6; j++) {
-                    if(!found && multiOptions[j]) {
-                        const match = multiOptions[j].find(o => o.l === optText);
-                        if(match) { emoji = match.e; found = true; }
-                    }
-                }
-                labelText = `${emoji} ${optText}`;
-            }
-            document.getElementById(`preo-label-${i}`).textContent = labelText;
-        }
-
-        document.getElementById('preo-title').style.opacity = '0';
-        document.getElementById('preo-title').style.transform = 'translateY(14px)';
-        document.getElementById('preo-subtitle').style.opacity = '0';
-        document.getElementById('preo-subtitle').style.transform = 'translateY(10px)';
-        bars.forEach(b => { b.style.opacity = '0'; b.style.transform = 'translateY(10px)'; });
-        barFills.forEach(b => { b.style.width = '0%'; });
-        document.getElementById('preo-buttons').style.opacity = '0';
-        document.getElementById('preo-buttons').style.transform = 'translateY(14px)';
-        document.getElementById('preo-buttons').style.pointerEvents = 'none';
-        for (let i = 0; i < 3; i++) {
-            document.getElementById('preo-opt-' + i).style.opacity = '0';
-            document.getElementById('preo-opt-' + i).style.transform = 'translateY(8px)';
-        }
-
-        if (answers.name) {
-            const prepDe = answers.gender === 'niña' ? 'de' : 'de';
-            document.getElementById('preo-subtitle-text').textContent = `Até agora identificamos que a situação ${prepDe} ${answers.name} está así:`;
-        }
-
-        // J=1 at 150ms: title
-        preoTimeouts.push(setTimeout(() => {
-            document.getElementById('preo-title').style.opacity = '1';
-            document.getElementById('preo-title').style.transform = 'translateY(0)';
-        }, 150));
-
-        // J=2 at 700ms: subtitle
-        preoTimeouts.push(setTimeout(() => {
-            document.getElementById('preo-subtitle').style.opacity = '1';
-            document.getElementById('preo-subtitle').style.transform = 'translateY(0)';
-        }, 700));
-
-        // J=3 at 1200ms: first bar + enable bar gradient flag
-        preoTimeouts.push(setTimeout(() => {
-            bars[0].style.opacity = '1';
-            bars[0].style.transform = 'translateY(0)';
-            barFills[0].style.width = pcts[0] + '%';
-        }, 1200));
-
-        // J=4 at 1750ms: second bar
-        preoTimeouts.push(setTimeout(() => {
-            bars[1].style.opacity = '1';
-            bars[1].style.transform = 'translateY(0)';
-            barFills[1].style.width = pcts[1] + '%';
-        }, 1750));
-
-        // J=5 at 2300ms: third bar
-        preoTimeouts.push(setTimeout(() => {
-            bars[2].style.opacity = '1';
-            bars[2].style.transform = 'translateY(0)';
-            barFills[2].style.width = pcts[2] + '%';
-        }, 2300));
-
-        // J=6 at 2850ms: fourth bar
-        preoTimeouts.push(setTimeout(() => {
-            bars[3].style.opacity = '1';
-            bars[3].style.transform = 'translateY(0)';
-            barFills[3].style.width = pcts[3] + '%';
-        }, 2850));
-
-        // Buttons at 3700ms
-        preoTimeouts.push(setTimeout(() => {
-            const btns = document.getElementById('preo-buttons');
-            btns.style.opacity = '1';
-            btns.style.transform = 'translateY(0)';
-            btns.style.pointerEvents = 'auto';
-            for (let i = 0; i < 3; i++) {
-                document.getElementById('preo-opt-' + i).style.opacity = '1';
-                document.getElementById('preo-opt-' + i).style.transform = 'translateY(0)';
-            }
-        }, 3700));
-    }
-
-    function clickPreocupante() {
-        showScreen('entendemos');
-    }
-
-    function clickEntendemos() {
-        currentStep = 7; // Resume quiz at step 7
-        showScreen('quiz');
-        updateUI();
-    }
-
-    // ==========================================
-    // LOADING ANIMATION (after step 10)
-    // ==========================================
-    let loadingStarted = false;
-    function startLoadingAnimation() {
-        if (loadingStarted) return;
-        loadingStarted = true;
-
-        const pronoun = answers.gender === 'niña' ? 'de' : 'de';
-        const childName = answers.name || (answers.gender === 'niña' ? 'tu hija' : 'tu hijo');
-        document.getElementById('checklist-title').textContent = `Personalizando o planner ${pronoun} ${childName}:`;
-
-        const items = [
-            `✏️ Rutina Escolar para ${childName}`,
-            '🏆 Sistema de Misiones y Recompensas',
-            '💪 Módulo de Control de Emociones',
-            '🌅 Rutinas de la mañana y de la noche',
-            '📖 Guía Completa para Padres',
-            '🎯 Metas semanales adaptadas al TDAH',
-            '⭐ Cuadro de logros y estrellas'
-        ];
-
-        const container = document.getElementById('checklist-items');
-        container.innerHTML = '';
-        let idx = 0;
-        const itemInterval = setInterval(() => {
-            if (idx < items.length) {
-                const div = document.createElement('div');
-                div.className = 'flex items-center justify-between text-xs text-amber-800 animate-fade-in';
-                div.innerHTML = `<span class="font-medium">${items[idx]}</span><span class="text-green-500 font-bold ml-2">✓</span>`;
-                container.appendChild(div);
-                idx++;
-            } else {
-                clearInterval(itemInterval);
-            }
-        }, 550);
-
-        let pct = 0;
-        const pctInterval = setInterval(() => {
-            pct = Math.min(pct + 2, 100);
-            document.getElementById('loading-bar').style.width = pct + '%';
-            document.getElementById('loading-pct').textContent = pct + '%';
-
-            if (pct >= 100) {
-                document.getElementById('loading-bar').style.background = 'linear-gradient(to right, #22c55e, #16a34a)';
-                document.getElementById('loading-status-text').textContent = '¡Planner TDAH Productivo Kids creado!';
-                document.getElementById('loading-title').textContent = `¡Planner creado con éxito para ${childName}! 🎉`;
-                document.getElementById('planner-cover').classList.remove('border-orange-200');
-                document.getElementById('planner-cover').classList.add('border-green-400', 'scale-105');
-                clearInterval(pctInterval);
-                setTimeout(() => {
-                    showScreen('roulette');
-                }, 2800);
-            } else if (pct > 60) {
-                document.getElementById('loading-status-text').textContent = `Finalizando o planner ${pronoun} ${childName}...`;
-            } else if (pct > 30) {
-                document.getElementById('loading-status-text').textContent = 'Personalizando módulos para el TDAH...';
-            } else {
-                document.getElementById('loading-status-text').textContent = `Preparando o planner ${pronoun} ${childName}...`;
-            }
-        }, 95);
-    }
-
-    // ==========================================
-    // ROULETTE ANIMATION
-    // ==========================================
-    function spinRoulette() {
-        const wheel = document.getElementById('roulette-wheel');
-        const btn = document.getElementById('btn-spin');
-        // Disable button
-        btn.disabled = true;
-        btn.style.opacity = '0.5';
-        
-        // Spin logic: rt-2 (80% OFF) is at 135deg. We rotate wheel by 360*5 + 225 = 2025deg to land on it exactly at the top.
-        wheel.style.transform = 'rotate(2025deg)';
-        
-        // Wait for spin to finish (3.5s transition time)
-        setTimeout(() => {
-            btn.style.display = 'none';
-            document.getElementById('roulette-result').classList.remove('hidden');
-        }, 3600);
-    }
-
-    function goToResults() {
-        window.location.href = `resultado.html?genero=${encodeURIComponent(answers.gender)}&nome=${encodeURIComponent(answers.name)}`;
-    }
-
-    // ==========================================
-    // QUIZ UI
-    // ==========================================
-    const countedSteps = new Set();
-    function updateUI() {
-        if (currentScreen === 'quiz' && !countedSteps.has(currentStep)) {
-            countedSteps.add(currentStep);
-            trackMetric('etapa_' + currentStep);
-        }
-        document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
-        document.getElementById('step-' + currentStep).classList.add('active');
-
-        const progressPct = (currentStep / 10) * 100;
-        document.getElementById('progress-bar').style.width = Math.min(progressPct, 100) + '%';
-
-        const btnBack = document.getElementById('btn-back');
-        if (currentStep > 1) {
-            btnBack.classList.remove('hidden');
-        } else {
-            btnBack.classList.add('hidden');
-        }
-
-        document.getElementById('nav-buttons').style.display = 'flex';
-        checkInput(currentStep);
-
-        // Dynamic texts
-        if (currentStep === 2) {
-            document.getElementById('gender-stats').innerText = answers.gender === 'niña' ? '3.847 niñas' : '4.231 niños';
-            document.getElementById('title-step-2').innerText = answers.gender === 'niña' ? '¿Cuántos años tiene?' : '¿Cuántos años tiene?';
-        }
-        if (currentStep === 3) {
-            document.getElementById('avatar-emoji').innerText = answers.gender === 'niña' ? '👧' : '👦';
-            document.getElementById('title-step-3').innerText = answers.gender === 'niña' ? '¿Cuál es el nombre de tu hija?' : '¿Cuál es el nombre de tu hijo?';
-            document.getElementById('desc-step-3').innerText = answers.gender === 'niña' ? 'Vamos a personalizar el planner con su nombre' : 'Vamos a personalizar el planner con su nombre';
-        }
-        if (currentStep >= 4 && answers.name) {
-            const prepDe = answers.gender === 'niña' ? 'de' : 'de';
-            const prepPara = answers.gender === 'niña' ? 'para la' : 'para el';
-            const artigoO = answers.gender === 'niña' ? 'la' : 'el';
-            document.querySelectorAll('#step-' + currentStep + ' .dynamic-name').forEach(el => {
-                if (currentStep === 4) el.innerHTML = `Qué es lo que más quieres eliminar de la rutina de ${prepDe} ${answers.name}?`;
-                if (currentStep === 5) el.innerHTML = `En qué áreas el TDAH trae más desafíos para ${prepPara} ${answers.name}?`;
-                if (currentStep === 6) el.innerHTML = `Qué lo distrae más a ${artigoO} ${answers.name}?`;
-                if (currentStep === 7) el.innerHTML = `Como ${answers.name} gerencia melhor a energia durante o dia?`;
-                if (currentStep === 8) el.innerHTML = `Qué NO puede faltar en el planner de ${prepDe} ${answers.name}?`;
-                if (currentStep === 9) el.innerHTML = `Cómo deseas estructurar la rutina de ${prepDe} ${answers.name} para reducir los conflictos?`;
-                if (currentStep === 10) el.innerHTML = `Y qué más te gustaría incluir en el planner de ${prepDe} ${answers.name}?`;
-            });
-        }
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function enableNext(enable) {
-        const btnNext = document.getElementById('btn-next');
-        if (enable) {
-            btnNext.removeAttribute('disabled');
-            btnNext.classList.remove('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
-            btnNext.classList.add('bg-orange-500', 'text-white', 'hover:bg-orange-600');
-        } else {
-            btnNext.setAttribute('disabled', 'true');
-            btnNext.classList.add('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
-            btnNext.classList.remove('bg-orange-500', 'text-white', 'hover:bg-orange-600');
-        }
-    }
-
-    function checkInput(step) {
-        if (step === 1) enableNext(!!answers.gender);
-        else if (step === 2) enableNext(!!answers.age);
-        else if (step === 3) enableNext(document.getElementById('child-name').value.trim().length > 0);
-        else if (step >= 4 && step <= 10) {
-            enableNext((selections[step] || []).length > 0);
-        }
-    }
-
-    function selectSingle(step, val, btn) {
-        document.querySelectorAll('#step-' + step + ' .option-btn').forEach(el => el.classList.remove('option-selected'));
-        btn.classList.add('option-selected');
-        if (step === 1) answers.gender = val;
-        if (step === 2) answers.age = val;
-        enableNext(true);
-    }
-
-    function toggleMulti(step, btn, isAll = false) {
-        if (!selections[step]) selections[step] = [];
-        if (isAll) {
-            const wasSelected = btn.classList.contains('option-selected');
-            document.querySelectorAll('.multi-btn-' + step).forEach(el => el.classList.remove('option-selected'));
-            if (!wasSelected) {
-                btn.classList.add('option-selected');
-                selections[step] = ['todos'];
-            } else {
-                selections[step] = [];
-            }
-        } else {
-            const allBtn = document.querySelectorAll('.multi-btn-' + step);
-            allBtn[allBtn.length - 1].classList.remove('option-selected');
-            if (btn.classList.contains('option-selected')) {
-                btn.classList.remove('option-selected');
-                selections[step] = selections[step].filter(i => i !== btn.innerText);
-            } else {
-                btn.classList.add('option-selected');
-                selections[step] = selections[step].filter(i => i !== 'todos');
-                selections[step].push(btn.innerText);
-            }
-        }
-        checkInput(step);
-    }
-
-    // ==========================================
-    // NAVIGATION (matches original flow exactly)
-    // Flow: 1→2→3→4→5→6 → PREOCUPANTE → ENTENDEMOS → 7→8→9→10 → LOADING
-    // ==========================================
-    function nextStep() {
-        if (currentStep === 3) answers.name = document.getElementById('child-name').value.trim();
-
-        // After step 6 → show Preocupante
-        if (currentStep === 6) {
-            showScreen('preocupante');
-            return;
-        }
-
-        // After step 10 → show Loading
-        if (currentStep === 10) {
-            showScreen('loading');
-            return;
-        }
-
-        // Normal: go to next step
-        currentStep++;
-        updateUI();
-    }
-
-    function prevStep() {
-        if (currentScreen === 'entendemos') {
-            showScreen('preocupante');
-            return;
-        }
-        if (currentScreen === 'preocupante') {
-            showScreen('quiz');
-            updateUI();
-            return;
-        }
-        if (currentStep > 1) {
-            currentStep--;
-            updateUI();
-        }
-    }
-
-    updateUI();
-</script>
-</body>
-</html>
+<!-- End Meta Pixel Code -->\n</body>\n</html>
